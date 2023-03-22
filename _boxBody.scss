@@ -1,0 +1,105 @@
+.box-body {
+  transform: translateY(0.1rem);
+  display: flex;
+  flex-wrap: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    a{
+      color: white;
+    }
+    color: white;
+    background-image: linear-gradient(
+      to bottom,
+      #fd7e67,
+      #fb745e,
+      #f86a56,
+      #f65f4e,
+      #f35346
+    );
+    border-radius: 5px;
+    opacity: 1;
+    box-shadow: 0px 0px 32px 5px rgba(0, 0, 0, 0.45);
+    width: 300px;
+    height: 25rem;
+    & > h1,
+    p {
+      text-align: center;
+    }
+    & > h1 {
+      font-size: 20px;
+    }
+    & > p,
+    ul {
+      flex: 1;
+      padding-inline: 1rem;
+    }
+    transition: 300ms box-shadow ease-in;
+    &:hover {
+      box-shadow: 0px 0px 15px 11px rgba(248, 102, 83, 0.41);
+    }
+    & > button,
+    & > a {
+      & > button {
+        width: 100%;
+      }
+      margin: 0 auto;
+      width: 70%;
+      margin-bottom: 2em;
+    }
+    & > ul{
+      text-decoration: none;
+      list-style: none;
+      & > li{
+        padding-top: .2rem;
+        text-align: start ;
+
+        &::before {
+        padding-right: 1rem;
+        content: "✓";
+        color: black;
+      }
+      }
+    }
+  }
+}
+.animated-button {
+  background-color: #803e31; /* Hintergrundfarbe des Buttons */
+  border: none; /* keine Grenze um den Button */
+  color: white; /* Textfarbe des Buttons */
+  padding: 15px 32px; /* Innenabstand des Buttons */
+  text-align: center; /* Textzentrierung im Button */
+  text-decoration: none; /* keine Unterstreichung des Texts */
+  display: inline-block; /* Anzeige des Buttons als Blockelement */
+  font-size: 16px; /* Schriftgröße des Buttons */
+  margin: 4px 2px; /* Außenabstand des Buttons */
+  border-radius: 10px;
+  cursor: pointer; /* Zeiger ändern, wenn über dem Button */
+  position: relative; /* Positionierung des Buttons */
+  overflow: hidden; /* Verhindern, dass animierte Elemente über den Button hinausgehen */
+}
+
+.animated-button::before {
+  content: ""; /* Leeres Pseudo-Element für die Animation */
+  position: absolute; /* Positionierung des Pseudo-Elements */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Hintergrundfarbe des Pseudo-Elements */
+  width: 100%; /* Breite des Pseudo-Elements */
+  height: 100%; /* Höhe des Pseudo-Elements */
+  left: -100%; /* Startposition des Pseudo-Elements */
+  top: 0; /* Position des Pseudo-Elements */
+  transition: all 0.2s ease-in; /* Übergangseffekt der Animation */
+}
+
+.animated-button:hover::before {
+  left: 0; /* Endposition des Pseudo-Elements */
+}

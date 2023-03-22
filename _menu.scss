@@ -1,0 +1,174 @@
+/* Popping out side menu on click -------------------------------------------------------------------------------------------*/
+/* Toggle Hamburger Menu -------------------------------------------------------------------------------------------*/
+$toggleclr: black;
+$transparent: rgba(0, 0, 0, 0);
+$menuclr: black;
+.navigation .menuToggle {
+  background-color: $menuclr;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation .menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: $toggleclr;
+  transform: translateY(-10px);
+  box-shadow: 0 10px $menuclr;
+  transition: 0.5s;
+}
+.navigation .menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: $toggleclr;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.navigation.active .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 $menuclr;
+}
+.navigation.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+/* The dropdown menu -------------------------------------------------------------------------------------------*/
+.navigation {
+  z-index: 1000000000000;
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  width: 120px;
+  height: 60px;
+  /* box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  /* glassmorph */
+}
+.navigation.active {
+  background: rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.85);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 60%;
+  height: 95%;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+}
+.navigation .userBx {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: $transparent;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.navigation.active .userBx {
+  width: calc(100% - 60px);
+}
+.navigation .userBx .username {
+  padding-left: 0.5em;
+  white-space: nowrap;
+  color: $menuclr;
+  font-size: 1.1em;
+}
+.navigation .userBx .imgBx {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #fff;
+}
+.navigation .userBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid $menuclr;
+}
+.menu li {
+  list-style: none;
+  gap: 10px;
+  margin: 20px 0;
+}
+.menu li a {
+  padding-bottom: 0.1em;
+  display: inline;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+.menu li a ion-icon {
+  font-size: 1.5em;
+}
+.logo {
+  height: 100%;
+  transform: translateY(-1em);
+}
+.shrink-menu {
+  .shrinkSize {
+    font-size: 32px;
+  }
+  .shrink-list-size {
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  height: 4rem;
+  width: 90%;
+  img {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .shrinkSize {
+    font-size: 32px;
+  }
+}
+/* Responsive dropdown menu----------------------------------------------------------------------------------------------*/
+@media (min-width: 750px) {
+  .navigation.active {
+    width: 96%;
+    height: 10em;
+  }
+  .menu {
+    transition-delay: width 2s;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      .logo {
+        display: none;
+      }
+    }
+  }
+  .navigation {
+    transition: width 2s;
+  }
+
+}

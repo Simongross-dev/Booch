@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="password.js" defer></script>
+    <script src="observer.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!--=============== CSS ===============-->
+  </head>
+  <body darkmode="false">
+    <div id="top-part"></div>
+    <div class="navigation">
+      <div class="userBx">
+        <!-- <div class="imgBx">
+          <img src="user.jpg" alt="user avatar" />
+        </div> -->
+        <p class="username"></p>
+      </div>
+      <div class="menuToggle"></div>
+      <ul class="menu">
+        <li>
+          <a href="#" class="hbtn hb-border-right-br4 activ">Home</a>
+        </li>
+        <li>
+          <a href="#über-uns">Über uns</a>
+        </li>
+        <li>
+          <a href="#leistung-section">Dienstleistungen</a>
+        </li>
+        <li>
+          <a href="./galery/galery.html">Galerie</a>
+        </li>
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+        <!-- <li style="padding-top: 1rem">
+          <img class="logo" src="images/logo.png" alt="" />
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- ----------------------------------- pc-header ------------------------- -->
+    <header style="transition: 0.5s" class="mainHeader">
+      <div>
+        <h1 class="shrinkSize">Malerfirma Booch</h1>
+      </div>
+      <ul class="shrink-list-size">
+        <li><a class="activ writing" href="#">Home</a></li>
+        <li aria-selected="true" class="underline">
+          <a class="writing" href="#über-uns">Über Uns</a>
+        </li>
+        <li class="underline">
+          <a href="#leistung-section" class="writing">Dienstleistungen</a>
+        </li>
+        <li class="underline">
+          <a class="writing" href="galery/galery.html">Galerie</a>
+        </li>
+        <li class="underline">
+          <a class="writing" href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+      <img src="images/Logo.png" alt="" />
+    </header>
+
+    <div class="homepage-main">
+      <div>
+        <div>
+          <p>
+            “Ob einfache Tapezierarbeiten, umfangreichste Trockenbauarbeiten
+            oder dekorative Putz- und Maltechniken - die Entscheidung für unser
+            Team gibt Ihnen die Sicherheit, sich langfristig für den richtigen
+            Partner entschieden zu haben.” <br />
+            <span>~ Paul Booch</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="top-part"></div>
+
+    <div id="über-uns" style="transform: translateY(2rem)"></div>
+    <main class="content">
+      <div id="hidden" class="hidden top-content">
+        <div class="text-content">
+          <h2>Unser Betrieb</h2>
+          <p>
+            Der Betrieb wurde 1965 von Paul Booch gegründet und 1996 an seine 3
+            Söhne übergeben. Unsere Erfahrung als Familien-Meisterbetrieb seit
+            mehr als 50 Jahren, vor allem auch unser hoher Anspruch in Beratung
+            und Service, ermöglichen uns, Ihren individuellen Anforderungen
+            stets gerecht zu werden. Ob einfache Tapezierarbeiten,
+            umfangreichste Trockenbauarbeiten oder dekorative Putz- und
+            Maltechniken - die Entscheidung für unser Team gibt Ihnen die
+            Sicherheit, sich langfristig für den richtigen Partner entschieden
+            zu haben. Durch die ständige Fort- und Weiterbildung unserer
+            Mitarbeiter sind wir arbeits technisch stets auf dem neuesten Stand.
+            Wir verwenden umweltfreundliche Materialien, setzen modernste
+            Verfahren ein, optimieren Arbeitszeiten und halten somit Ihren
+            Kostenrahmen überschaubar.
+          </p>
+        </div>
+        <div class="img-content">
+          <img src="images/place-holder1.jpg" alt="" class="img-hover" />
+        </div>
+      </div>
+      <div id="hidden" class="hidden bottom-content">
+        <div class="img-content">
+          <img src="images/place-holder1.jpg" alt="" class="img-hover" />
+        </div>
+        <div class="text-content">
+          <h2>50 Jahre Familien-Meisterbetrieb BOOCH</h2>
+          <p>
+            Seit 50 Jahren stehen wir nun schon im Dienst des Kunden. Das war
+            ein guter Grund zu feiern. Mit Mitarbeitern und Freunden erlebten
+            wir am 03. Oktober 2015 ein tolles Event.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section id="leistung-section">
+      <div class="pictureHeading"></div>
+      <h1 class="uppercase leistungen-heading">Dienstleistungen</h1>
+      <div class="box-body">
+        <div>
+          <h1 class="uppercase">Unsere Kunden</h1>
+          <p>
+            Wir sind stets darauf konzentriert, unsere Kunden zufrieden zu stellen.  Wir arbeiten sorgfältig, mit Bedacht und zielgerichtet.
+          </p>
+          <button class="animated-button" onclick="openGalery()">Bilder</button>
+        </div>
+        <div>
+          <h1 class="uppercase">Heute schon die Trends von morgen</h1>
+          <p>
+            Wir bieten Ihnen Gestaltungsmöglichkeiten im Innen- und
+            Aussenbereich, die Ihr Haus zu dem machen, was es sein sollte - ein
+            unverwechselbares Unikat. Wir sorgen dafür, dass Sie sich in Ihren 4
+            Wänden wohlfühlen. Aber gerade diese werden z.B. durch Ein- und
+            Auszug in besonderem Maße beansprucht.
+          </p>
+          <a href="#trends"><button class="animated-button">Erfahre mehr</button></a>
+        </div>
+        <div>
+          <h1 class="uppercase">Unsere Leistungen</h1>
+          <ul>
+            <li>Fassadenanstriche</li>
+            <li>Farbgestaltung</li>
+            <li>Tapezierarbeiten</li>
+            <li>Lackierungen aller Art</li>
+            <li>Lasur-, Wisch- und Glättetechniken</li>
+            <li>Schablonieren</li>
+            <li>Stuck- und Stilelemente</li>
+            <li>Bodenverlegearbeiten</li>
+            <li>Urlaubs-Malerservice</li>
+          </ul>
+          <a href="#css-script-menu"><button onclick="highlightContent()" class="animated-button">Erfahre mehr</button></a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- -------------------------------------------------------------------tick anfang---------------------------------------------------------------------------------------- -->
+
+    <div id="css-script-menu"></div>
+    <section class="accordion container leistungen-section">
+      <div id="hidden" class="hidden accordion__container">
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">Putzarbeiten</h3>
+          </header>
+          <div class="accordion__content">
+            <p class="accordion__description">
+              Wir verarbeiten Innenputze, welche das Raumklima verbessern und
+              damit Ihr Wohlbefinden steigern! Auch im Außenbereich verarbeiten
+              wir ausschließlich mineralische Putzsysteme. Dekorative
+              Oberflächen schaffen wir im Innen- und Außenbereich mit unseren
+              Decorputzen in Struktur und Farbe.
+            </p>
+            <div class="list-tick-section">
+              <ul class="line dots">
+                <li>Aussenbereich</li>
+                <li>Kalkputz</li>
+                <li>Gipsputz</li>
+                <li>Lehmputz</li>
+                <li>Sanierputz</li>
+                <li>Lehmdekorputz</li>
+                <li>Kalkdekorputz</li>
+              </ul>
+              <ul class="dots">
+                <li>Innenbereich</li>
+                <li>Kalk-Zementleichtputz</li>
+                <li>Zementputz</li>
+                <li>Kalkputz</li>
+                <li>Renovierputz</li>
+                <li>Wärmedämmputz</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">Wärmedämmung</h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">
+              Altbausanierung oder Neubau - wir dämmen Ihr Haus nach dem
+              neuesten Stand der Technik (EnV´09), um Energiekosten zu senken
+              und die Umwelt zu schonen, aber auch, um Ihrer Fassade ein
+              individuelles Aussehen zu verleihen.
+            </p>
+            <h2>Ihre Vorteile auf einen Blick</h2>
+            <ul class="vorteile">
+              <li>Sparen Sie Heizkosten</li>
+              <li>
+                Sie haben es im Sommer angenehm kühl, im Winter wohlig warm
+              </li>
+              <li>Sie steigern den Wert Ihrer Immobilie</li>
+              <li>
+                Umweltschutz durch eine sinnvolle Dämmung ist Ihr persönlicher
+                Beitrag gegen das Ozonloch!
+              </li>
+              <li>Amortisierung Ihrer Zukunftsinvestition in kurzer Zeit</li>
+            </ul>
+            <div class="list-tick-section">
+              <ul class="line dots">
+                <li>Für Fassaden</li>
+                <li>Polysterol</li>
+                <li>Mineralwolle</li>
+                <li>PU-Dämmplatte</li>
+                <li>Holzweichfaser</li>
+              </ul>
+              <ul class="dots">
+                <li>Innenbereich</li>
+                <li>
+                  Calciumcilikat <br />
+                  (Wohn-raumklimaplatten)
+                </li>
+                <li>Mineralschaumplatten</li>
+                <li>Kellerdeckendämmung</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">Trockenbau</h3>
+          </header>
+          <div class="accordion__content" >
+            <p class="accordion__description">
+              Flexible Raumgestaltung mit TrockenbauAlle Anforderungen an
+              Wärmedämmung, Brandschutz und Schallschutz lassen sich mit einer
+              Trockenbaukonstruktion realisieren.
+            </p>
+            <div class="list-tick-section">
+              <ul class="line dots">
+                <li>Ihre Vorteile</li>
+                <li>kurze Bauzeiten</li>
+                <li>keine Trockenzeiten</li>
+                <li>
+                  individuelle <br />
+                  Gestaltungs-möglichkeiten
+                </li>
+              </ul>
+              <ul class="dots">
+                <li>Unsere Leistung</li>
+                <li>Dachausbau und Isolierung</li>
+                <li>Trenn- und Montagewände</li>
+                <li>Vorsatzschalen</li>
+                <li>abgehängte Decken</li>
+                <li>Akustikdecken</li>
+                <li>Trockenestriche</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">Spanndecken</h3>
+          </header>
+          <div class="accordion__content">
+            <h2>Decken neu erleben!</h2>
+            <p class="accordion__description">
+              Wir gestalten Ihre gespannte Decke in Form, Farbe und Licht. Neben
+              der effektvollen Optik sind weitere Vorteile problemlose und
+              schnelle Montage, lange Haltbarkeit und bei Glanzdecken eine
+              raumvergrößernde Wirkung. Sie bieten eine Gute Lösung alte
+              verschwinden zu lassen ohne diese ausbauen zu müssen. Bei uns
+              erhalten Sie das komplette System incl. Einbauleisten und
+              Sternenhimmel.Sie sind Feuchtraum geeignet (Bäder, Schwimmbad),
+              reißfest, antistatisch, pflegeleicht.
+            </p>
+            <ul class="vorteile">
+              <li style="font-weight: 700">Wir unterscheiden:</li>
+              <li>Glanzdecken</li>
+              <li>Mattdecken</li>
+              <li>Strukturdecken</li>
+              <li>Tageslichtdecken</li>
+            </ul>
+            <div class="show-imgs">
+              <img src="images/zertifikat.png" alt="" />
+            </div>
+            <p class="accordion__description" style="padding-top: 1rem">
+              Wir sind zertifizierter ciling Premium-Partner!
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <header class="accordion__header">
+            <i class="bx bx-plus accordion__icon"></i>
+            <h3 class="accordion__title">Schimmelbefall</h3>
+          </header>
+
+          <div class="accordion__content">
+            <p class="accordion__description">
+              Schimmel ist unansehnlich! Aber nicht nur das, er ist in den
+              meisten Fällen auch sehr gefährlich für die Gesundheit - gerade
+              für Allergiker und Menschen mit geschwächtem Immunsystem, sowie
+              Kinder.Gerne ermitteln wir die Ursache von Schimmelschäden, wie
+              sie durch Feuchtigkeit, mangelende Wärmedämmung und schlechtes
+              Lüften entstehen können. Diese beseitigen wir durch nachhaltige
+              Sanierung des Schadens.Lassen Sie sich individuell von uns
+              beraten.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!--  -->
+
+      <div id="trends" class=" leistung-section-description-one">
+        <h1 style="padding-bottom: 1rem;
+                    text-align: center;"
+        >Heute schon die Trends von Morgen</h1>
+        <div class=" neues-divs">
+          <div id="hidden" class="hidden">
+            <img class="first-img" src="./images/254@2x.jpg" alt="" />
+            <h3>Steine Marmor und Wasser</h3>
+            <p>
+              Klassischer Venizianischer Putz, aesthetisch und raffiniert,
+              persönlich gestaltete Reliefeffekte in verschiedenen
+              Farbkombinationen - geben Sie Ihre, Wohnraum einen einzigartigen
+              Glanz.
+            </p>
+          </div>
+          <div id="hidden" class="hidden">
+            <img class="second-img" src="./images/spanndecke2.jpg" alt="" />
+            <h3>Spannende Decken mit modernem look and feel</h3>
+            <p>
+              Nicht nur, dass sie absolut pflegeleicht sind, sie zaubern einfach
+              eine ganz tolle Atmosphäre und sehen superedel aus. Die von uns
+              verwendete Spanndecke ist sozusagen ein
+              "Decke-unter-Decke-System", bei dem die alte Decke komplett
+              kaschiert wirdohne Sie zu entfernen. Damit lassen sich auch
+              unschöne Verkabelungen, Installationen oder Unebenheiten perfekt
+              verbergen.
+            </p>
+            <button
+              class="animated-button"
+              style="margin-top: 1rem"
+              onclick="openYtVideo()"
+            >
+              Video zu Spanndecken
+            </button>
+          </div>
+        </div id="hidden" class="blurr-in">
+        <h2 class="hidden">Volimea Kalk-Marmor-Putz</h2>
+        <p class="hidden">
+          Schaffen Sie Raum - im ästhetischen Ambiente und auf Basis natürlicher
+          Materialien. Der Kalk-Marmor-Putz von Volimea verbindet modernes
+          Lebensgefühl und ökologische Aspekte. Glatte oder marmorierte
+          Oberflächen, erdige Farbnuancen oder innovative Beton-Optik-Volimea
+          hebt den Stil hervor, der zu Ihrer Persönlichkeit passt. Hochwertige
+          mineralische Pigmente auf der Basis von Kalk und Marmormehl regulieren
+          die Luftfeuchtigkeit und sorgen für ein gesundes Raumklima. Eine
+          harmonisch aufeinander abgestimmte Farbpalette und höchste
+          Produkt-Qualität lassen Ihnen viel Freiraum bei der Gestaltung von
+          Oberflächen. Leben Sie Ihre Individualität im gesunden Einklang
+          mit Ihrer Umgebung.
+        </p>
+      </div>
+    </section>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="box/main.js"></script>
+    <script>
+      try {
+        fetch(
+          new Request(
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+            { method: "HEAD", mode: "no-cors" }
+          )
+        )
+          .then(function (response) {
+            return true;
+          })
+          .catch(function (e) {
+            var carbonScript = document.createElement("script");
+            carbonScript.src =
+              "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+            carbonScript.id = "_carbonads_js";
+            document.getElementById("carbon-block").appendChild(carbonScript);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-46156385-1", "cssscript.com");
+      ga("send", "pageview");
+    </script>
+
+    <!-- -------------------------------------------------------------tick ende---------------------------------------------------------------------------------------------- -->
+    <div class="stroke">
+      <div class="overheading heading-animation">
+        <h1>Unsere Partner <span style="color: red">&</span> Kunden</h1>
+      </div>
+    </div>
+
+    <section style="flex: 1">
+      <div class="partner-kunden">
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  "Poah die sind so toll ey" <br />
+                  ~ Kunde0
+                </p>
+                <div>
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque, fugit."
+                  <br />
+                  ~ Kunde1
+                </p>
+                <div class="Sterne">
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deleniti aperiam optio quo adipisci obcaecati voluptates
+                  suscipit esse, repudiandae et tempora." <br />
+                  ~ Kunde2
+                </p>
+                <div class="Sterne">
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum culpa nemo beatae praesentium iure accusamus incidunt
+                  molestias, nulla pariatur totam iusto esse ab a doloremque."
+                  <br />
+                  ~ Kunde3
+                </p>
+                <div class="Sterne">
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, obcaecati." <br />
+                  ~ Kunde4
+                </p>
+                <div class="Sterne">
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="my-slides" class="rezension">
+          <div class="rezension-inhalt">
+            <button class="btn-left" onclick="plusDivs(-1)">&#10094;</button>
+            <div class="rezension-order">
+              <div class="rez-img">
+                <img src="images/placeholder.jpg" alt="" />
+              </div>
+              <div class="rez-con">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum aliquam qui ea, mollitia eum nam ad vel cumque.
+                  Molestiae, id eum! Deserunt deleniti, distinctio id iste animi
+                  nesciunt nobis eos laborum, quos praesentium repellat?
+                  Molestiae, dolor eius! Unde, corrupti suscipit! Accusantium
+                  nesciunt blanditiis ratione asperiores ut vel consectetur,
+                  temporibus consequuntur fugit, delectus sed corporis nobis
+                  rerum labore obcaecati! Deserunt minus, aperiam soluta quam
+                  aspernatur aliquid itaque saepe alias facilis possimus
+                  expedita voluptatum sapiente explicabo ab culpa. Repellat
+                  rerum amet sequi aut aspernatur libero in illum optio neque!
+                  Quos exercitationem eius expedita aspernatur voluptatibus iure
+                  sapiente, deleniti maiores, repudiandae provident itaque!
+                  <br />
+                  ~ Kunde5
+                </p>
+                <div class="Sterne">
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                  <img src="images/icons/star.png" alt="Stern" />
+                </div>
+              </div>
+            </div>
+            <button class="btn-right" onclick="plusDivs(+1)">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer id="footer">
+      <!-- information -->
+      <!-- icons -->
+      <div class="top-footer">
+        <div>
+          <ul>
+            <li>BliBlaBlub</li>
+            <li>Randomstraße 11</li>
+            <li>54321 Erfundene Stadt</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <a href="tel:+4915773934304" style="color: white"
+              >+49 1234 5678 910</a
+            >
+            <li>TestEmail@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+    </footer>
+    <div id="app" class="pw-page invisible ">
+      <input
+        id="passwordField"
+        type="text"
+        placeholder="Passwort:"
+        v-model="password"
+      />
+      <p id="response">{{message}}</p>
+      <button @click="checkPassword()">Weiter</button>
+    </div>
+  </body>
+</html>

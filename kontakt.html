@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="height: 100%" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body style="display: flex; flex-direction: column; height: 100%">
+    <!-- 
+
+
+     -->
+
+    <div class="navigation">
+        <div class="userBx">
+        <!-- <div class="imgBx">
+          <img src="user.jpg" alt="user avatar" />
+        </div> -->
+        <p class="username"></p>
+      </div> 
+      <div class="menuToggle"></div>
+      <ul class="menu">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="index.html#über-uns">Über uns</a>
+        </li>
+        <li>
+          <a href="index.html#leistung-section">Dienstleistungen</a>
+        </li>
+        <li>
+          <a href="galery/galery.html">Galerie</a>
+        </li>
+        <li>
+          <a class="activ" href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <header class="mainHeader">
+      <div class="">
+        <h1>Malerfirma Booch</h1>
+      </div>
+      <ul>
+        <li class="underline"><a href="index.html">Home</a></li>
+        <li class="underline"> <a href="index.html#über-uns">Über Uns</a></li>
+        <li class="underline"><a href="index.html#leistung-section">Dienstleistungen</a></li>
+        <li class="underline">
+          <a href="galery/galery.html">Galerie</a>
+        </li>
+        <li><a href="#" class="activ">Kontakt</a></li>
+      </ul>
+      <img src="images/Logo.png" alt="" />
+    </header>
+    <section
+      style="
+        flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        transform: translate(0, 7rem);
+      "
+    >
+      <div class="mapouter">
+        <iframe
+          class="gmap"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10187.25970897647!2d8.940293!3d50.332704!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd1df9abfeed41%3A0x5f6d988b04503d93!2sFriedrichstra%C3%9Fe%204%2C%2061197%20Florstadt%2C%20Deutschland!5e0!3m2!1sde!2sus!4v1678217554352!5m2!1sde!2sus"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h1 style="text-transform: uppercase; text-align: center">
+          Schreib uns eine Nachricht:
+        </h1>
+
+        <div class="testClass">
+          <div class="nameSection">
+            <input type="surname" placeholder="Name" />
+            <input type="name" placeholder="Vorname" />
+          </div>
+          <input class="email" type="email" placeholder="Email" />
+        </div>
+
+        <textarea
+          name="msg"
+          id=""
+          cols="40"
+          rows="10"
+          placeholder="Deine Nachricht"
+        ></textarea>
+        <input type="submit" class="submit"></input>
+      </form>
+      <div></div>
+    </section>
+    <footer id="footer" style="margin-top: 3em">
+      <!-- information -->
+      <!-- icons -->
+      <div class="top-footer">
+        <div>
+          <ul>
+            <li>Pizzaria-BliBlaBlub</li>
+            <li>Randomstraße 11</li>
+            <li>54321 Erfundene Stadt</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>+49 1234 5678 910</li>
+            <li>TestEmail@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

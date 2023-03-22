@@ -1,0 +1,168 @@
+$reztxt: #444;
+.partner-kunden {
+  margin: 0 auto;
+  padding: 0 1em;
+  padding-bottom: 2em;
+  // display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  transform: translate(0, 7rem);
+  // .rez-nav-btns {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   margin: auto;
+  //   z-index: 1;
+  //   width: 100%;
+  // .btn-left {
+  //   flex: 1;
+  //   border: none;
+  //   border-radius: 8px 0 0 8px;
+  // }
+  // .btn-right {
+  //   flex: 1;
+  //   border: none;
+  //   border-radius: 0 8px 8px 0;
+  // }
+  #my-slides {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  .rezension {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .rezension-inhalt {
+      display: flex;
+      flex-direction: row;
+      // height: 40vh;
+      flex: 1;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      -webkit-box-shadow: 0px 0px 74px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 74px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 74px 0px rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      .btn-left {
+        flex: 1; 
+        border: none;
+        border-radius: 8px 0 0 8px;
+        &:hover{
+          background-color: rgb(177, 177, 177);
+        }
+      }
+      .btn-right {
+        flex: 1;
+        border: none;
+        border-radius: 0 8px 8px 0;
+        &:hover{
+          background-color: rgb(177, 177, 177);
+        }
+      }
+      .rezension-order {
+        display: flex;
+        flex: 8;
+        justify-content: center;
+        align-items: center;
+        .rez-img {
+          height: 100%;
+          flex: 3;
+          img {
+            margin-top: 1em;
+            padding-left: 1em;
+            object-fit: cover;
+            height: 90%;
+            width: 100%;
+          }
+        }
+        .rez-con {
+          display: flex;
+          flex-direction: column;
+          flex: 7;
+          p {
+            flex: 8;
+            // position: absolute;
+            text-align: center;
+            color: $reztxt;
+            padding: 1em;
+          }
+          div {
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            img {
+              aspect-ratio: 1;
+              min-width: 1.5em;
+              height: 100%;
+              display: inline-block;
+              width: 3%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .partner-kunden {
+    .rezension {
+      .rezension-inhalt {
+        .btn-right {
+          flex: 1.5;
+        }
+        .btn-left {
+          flex: 1.5;
+        }
+    }
+  }
+  .rezension-order {
+    flex: 3;
+    transform: translate(0, -1rem);
+    min-height: 50vh;
+    margin: 0 auto;
+    padding: 1em;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1em;
+    padding-top: 3em;
+    }
+    .rez-content {
+      flex: 1;
+    }
+    .rez-img {
+      display: none;
+      padding-left: 0;
+      width: 100%;
+      order: 2;
+      img {
+        bottom: 0;
+        padding-left: 0 !important;
+        width: 100%;
+        // max-height: 56.5%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .partner-kunden {
+    .rezension {
+      .rezension-inhalt {
+        .btn-right {
+          flex: 2.25;
+        }
+        .btn-left {
+          flex: 2.25;
+        }
+      }
+    }
+  }
+}

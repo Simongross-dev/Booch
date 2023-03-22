@@ -1,0 +1,36 @@
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all .3s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+// .icons {
+//   img {
+//     height: auto;
+//   }
+//   &:nth-child(1){
+//     transition: 6s;
+//   }
+//   &:nth-child(2){
+//     transition: 4s;
+//   }
+//   &:nth-child(3){
+//     transition: 2s;
+//   }
+// }
+@media (max-width: 800px) {
+  .hidden {
+    transition: none;
+  }
+}
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

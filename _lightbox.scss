@@ -1,0 +1,44 @@
+.lightbox-karte {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.lightbox-teil {
+  width: 25vw;
+  height: 70vh;
+}
+.lightbox-img {
+  object-fit: fill;
+  width: 25vw;
+  height: 70vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}
+#lightbox {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  transition: 0.5s;
+}
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lightbox img {
+  width: 60%;
+  height: auto;
+}
+
+@media (max-width: 1400px) {
+  #lightbox img {
+    width: 90vw;
+    height: auto;
+  }
+}

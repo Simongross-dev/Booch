@@ -1,0 +1,304 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --hue-color: 225;
+  --first-color: hsl(var(--hue-color), 48%, 35%);
+  --title-color: hsl(var(--hue-color), 48%, 22%);
+  --text-color: hsl(var(--hue-color), 12%, 35%);
+  --body-color: hsl(var(--hue-color), 49%, 98%);
+  --container-color: transparent;
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: .938rem;
+  --small-font-size: 15px;
+  --smaller-font-size: 15px;
+}
+
+
+
+@media screen and (min-width: 968px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  width: 100%;
+  background-color: transparent;
+}
+
+/*=============== ACCORDION ===============*/
+.accordion {
+  display: grid;
+  align-content: center;
+  height: auto;
+}
+
+.accordion__container {
+  display: grid;
+  row-gap: .75rem;
+  padding: 2rem 1rem;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+}
+
+.accordion__title {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: 400;
+  transition: .2s;
+}
+
+.accordion__header {
+  display: flex;
+  column-gap: .5rem;
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+  cursor: pointer;
+}
+
+.accordion__description {
+  padding: 0 1.25rem 1.25rem 3rem;
+  font-size: 15px;
+}
+
+.accordion__icon {
+  font-size: 1.5rem;
+  height: max-content;
+  color: var(--title-color);
+  transition: .3s;
+}
+
+.accordion__item {
+  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  background-color: var(--container-color);
+  border-radius: .25rem;
+  position: relative;
+  transition: all .25s ease;
+}
+
+.accordion__item::after {
+  content: '';
+  background-color: var(--first-color);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .25rem 0 0 .25rem;
+}
+$background-div: #fff5f0;
+$side-div: #ff8e8a;
+$backround-div-darker: #f8f0ed;
+
+.accordion__item:nth-child(1) {
+  background-color: $background-div;
+}
+
+.accordion__item:nth-child(1)::after {
+  background-color: $side-div;
+}
+
+.accordion__item:nth-child(2) {
+  background-color: $backround-div-darker;
+}
+
+.accordion__item:nth-child(2)::after {
+  background-color: $side-div;
+}
+
+.accordion__item:nth-child(3) {
+  background-color: $background-div;
+}
+
+.accordion__item:nth-child(3)::after {
+  background-color: $side-div;
+}
+
+.accordion__item:nth-child(4) {
+  background-color: $backround-div-darker;
+}
+
+.accordion__item:nth-child(4)::after {
+  background-color: $side-div;
+}
+.accordion__item:nth-child(5) {
+  background-color: $background-div;
+}
+.accordion__item:nth-child(5)::after {
+  background-color: $side-div;
+}
+
+.accordion__content {
+  display: grid;
+  overflow: hidden;
+  height: 0;
+  transition: all .25s ease;
+  
+  h2{
+    padding-bottom: .5rem;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  .vorteile{
+    text-align: start;
+    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-bottom: .5rem;
+    list-style: none;
+    & > li{
+      font-size: 15px;
+      &::before {
+        padding-right: 1rem;
+        content: ">";
+        color: green;
+      }
+    }
+  }
+  & > div{
+    display: flex;
+    padding-top: 1rem; 
+    justify-self: center;
+    gap: 1rem;
+    & > ul{
+      list-style: none;
+      & > li{
+        &:first-child{
+          font-weight: 800;
+          text-decoration: underline;
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+        }
+        &:last-child{
+          padding-bottom: 1rem;
+        }
+      }
+    }
+    
+  }
+  .show-imgs{
+    transform: translateX(6rem);
+    width: 20rem; 
+    height: 10rem;
+  }
+}
+
+/*Rotate icon and add font weight to titles*/
+.accordion-open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.accordion-open .accordion__title {
+  font-weight: 600;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .accordion__container {
+    width: 550px;
+    padding: 2.5rem;
+    justify-self: center;
+    border-radius: .75rem;
+  }
+  .accordion__header {
+    padding: 1.5rem;
+  }
+  .accordion__title {
+    padding-right: 3.5rem;
+  }
+  .accordion__description {
+    padding: 0 4rem 1.25rem 3.5rem;
+  }
+}
+
+.leistung-section-description-one{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .neues-divs{
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    & > div {
+      .first-img{
+        max-width: 100%;
+      }
+      .second-img{
+        max-width: 90%;
+      }
+    }
+  }
+}
+.dots{
+  & > li{
+    &::before {
+      padding-right: 1rem;
+      content: ">";
+      color: black;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .neues-divs {
+    flex-direction: column;
+  }
+}
+@media (min-width: 522px) {
+  .line{
+    border-right: 1px solid rgb(204, 182, 156);
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 522px) {
+  .list-tick-section{
+    flex-direction: column;
+    padding-bottom: 4rem;
+  }
+}
+.highlight{
+  animation: test 2s ease-in-out;
+  .accordion__item:nth-child(1){
+    background-color: $background-div;
+  }
+  .accordion__item:nth-child(2){
+    background-color: $background-div; 
+  }
+  .accordion__item:nth-child(3){
+    background-color: $background-div;
+  }
+  .accordion__item:nth-child(4){
+    background-color: $background-div; 
+  }
+  .accordion__item:nth-child(5){
+    background-color: $background-div;
+  }
+}
+
+$hoverColor: rgba(0, 0, 0, 0.15); 
+
+@keyframes test {
+  0%{
+    background-color: white;
+  }
+  66%{
+    background-color: $hoverColor;
+  }
+  100%{
+    background-color: white;
+  }
+}
